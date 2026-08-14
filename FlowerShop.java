@@ -94,7 +94,7 @@ public class FlowerShop {
         };
 
         System.out.println("\n\nFLOWER SHOP WEEKLY SALES REPORT");
-        System.out.println("===============================================================");
+        System.out.println("============================================================");
 
         
         
