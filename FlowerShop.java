@@ -94,36 +94,40 @@ public class FlowerShop {
         };
 
         System.out.println("\n\nFLOWER SHOP WEEKLY SALES REPORT");
-        System.out.println("=====================================================================");
+        System.out.println("===============================================================");
 
-        System.out.println("Day\t\tRoses\t\tTulips\t\tLilies\t\tTotal\n");
-
-        System.out.println("---------------------------------------------------------------------");
-
-        for (int r = 0; r < arrSales.length; r++) 
-        { 
         
+        
+        System.out.printf(
+                "%-12s %-10s %-10s %-10s %-10s%n",
+                "Day", "Roses", "Tulips", "Lilies", "Total"
+        );
+
+        System.out.println("------------------------------------------------------------");
+
+        for (int r = 0; r < arrSales.length; r++) {
+
             int dailyTotal = 0;
-        
-            System.out.print(days[r] + "\t\t");
-            
-            // Add the sales for each bouquet type 
-            for (int c = 0; c < arrSales[r].length; c++) 
-            { 
-            
-                System.out.print(arrSales[r][c] + "\t\t"); 
-                
-                dailyTotal += arrSales[r][c]; 
-        
-            }
-            
-          System.out.println();
 
-        } 
-        
-        
-        System.out.println("-------------------------------------------------------------------");
+            
+            System.out.printf("%-12s", days[r]);
+
+            // Add the sales for each bouquet type 
+            for (int c = 0; c < arrSales[r].length; c++) {
+
+                
+                System.out.printf(" %-10d", arrSales[r][c]);
+
+                dailyTotal += arrSales[r][c];
+            }
+
+            
+            System.out.printf(" %-10d%n", dailyTotal);
+        }
+
+        System.out.println("------------------------------------------------------------");
     }
+
 
     private static void rowSum(int[][] arrSales) {
         
